@@ -56,7 +56,7 @@ document.getElementById('send-btn').addEventListener('click', async () => {
     } catch (error) {
       // Hide the generating message and show an error message
       generatingMessage.style.display = 'none'; // Directly manipulate style
-      addMessage('bot', 'Sorry, there was an error. Please try again later.');
+      addMessage('bot', 'Sorry, there was an error. Please try again.');
     }
 
     document.getElementById('user-input').value = '';
