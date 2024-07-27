@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat History</title>
   <style>
-    /* styles.css */
 
 body {
     font-family: Arial, sans-serif;
@@ -83,14 +82,12 @@ body {
     background-size: 200% auto;
     color: rgb(44, 44, 44);
     font-weight: bold;
-   /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
-    /* box-shadow: 0 0 20px #eee; */
     border-radius: 10px;
     background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
    }
   
    button:hover {
-    background-position: right center; /* change the direction of the change here */
+    background-position: right center; 
   }
   </style>
 </head>
@@ -111,10 +108,10 @@ body {
           messageElement.className = `message ${msg.sender}`;
           
           const logo = document.createElement('img');
-          logo.src = msg.sender === 'user' ? 'assets/user.png' : 'assets/bot.png'; // Replace with the actual paths to your logos
+          logo.src = msg.sender === 'user' ? 'assets/user.png' : 'assets/bot.png'; 
 
           const textElement = document.createElement('span');
-          textElement.innerText = `${msg.message || 'No response'}`; // Handle empty messages
+          textElement.innerText = `${msg.message || 'No response'}`; 
 
           messageElement.appendChild(logo);
           messageElement.appendChild(textElement);

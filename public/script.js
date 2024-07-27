@@ -27,7 +27,7 @@ const sendMessageToServer = async (message) => {
     messageElement.className = `message ${sender}`;
     
     const logo = document.createElement('img');
-    logo.src = sender === 'user' ? 'assets/user.png' : 'assets/bot.png'; // Replace with the actual paths to your logos
+    logo.src = sender === 'user' ? 'assets/user.png' : 'assets/bot.png'; 
   
     const textElement = document.createElement('span');
     textElement.innerText = message || 'No response'; // Handle empty messages
@@ -65,6 +65,6 @@ const sendMessageToServer = async (message) => {
 
   
   document.getElementById('history-btn').addEventListener('click', () => {
-    window.location.href = '/history.html'; // Handle history page routing (optional)
+    window.location.href = '/history.html'; // Handle history page routing
   });
   
