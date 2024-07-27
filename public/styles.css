@@ -188,3 +188,31 @@ body {
     border-radius: 50%; /* Circle shape */
   
   }
+  @media (max-width: 480px) {
+    .logo {
+      display: none;
+    }
+    .container{
+      max-width: 100%;
+    }
+  .history-container{
+    max-width: 100%;
+
+  }
+    #chat-history {
+      height: 70vh;
+    }
+  
+    #user-input {
+      font-size: 12px;
+    }
+  
+    #send-btn, #history-btn {
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    #generating-message {
+      font-size: 12px;
+    }
+  }
