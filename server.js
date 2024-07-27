@@ -9,9 +9,9 @@ const PORT = process.env.PORT || 3000;
 // Setup Gemini API client
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
+// Connect to MongoDB Atlas
 const setup = async () => {
   try {
-    // Connect to MongoDB Atlas
     await mongoose.connect(process.env.MONGODB_URI, { serverSelectionTimeoutMS: 5000 });
     console.log('MongoDB connected');
   } catch (error) {
@@ -64,7 +64,7 @@ app.post('/api/message', async (req, res) => {
 app.get('/history', async (req, res) => {
   try {
     // Retrieve messages from MongoDB
-    const messages = await Message.find().sort('timestamp');
+    const messages = await Message.find().sort({ timestamp: -1 });
     res.json(messages);
   } catch (error) {
     console.error('Error fetching history:', error);
@@ -73,5 +73,5 @@ app.get('/history', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port http://localhost:${PORT}/`);
 });
