@@ -56,9 +56,9 @@ app.post('/api/message', async (req, res) => {
       return res.json({ reply: cachedResponse });
     }
 
-    // Generate bot response
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); // Cache this if needed
-    const response = await model.generateContent([message]);
+    // Generate bot response with optional max tokens for length control
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const response = await model.generateContent([message], { maxTokens: 512 }); // Adjust maxTokens as needed
     const botMessage = response.response.text();
 
     // Cache the response
