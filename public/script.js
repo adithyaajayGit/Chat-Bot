@@ -17,7 +17,7 @@ const sendMessageToServer = async (message) => {
     return data.reply;
   } catch (error) {
     console.error('Error:', error);
-    return 'Sorry, there was an error. Please try again later.';
+    return 'Sorry, there was an error. Please try again.';
   }
 };
 
