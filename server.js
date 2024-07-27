@@ -61,6 +61,7 @@ app.post('/api/message', async (req, res) => {
   }
 });
 
+
 app.get('/history', async (req, res) => {
   try {
     // Retrieve messages from MongoDB
