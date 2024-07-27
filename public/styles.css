@@ -1,4 +1,3 @@
-/* Basic reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,6 @@ body {
   background-color: #171717;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   height: 100vh;
   margin: 0;
 }
@@ -31,7 +29,7 @@ body {
 }
 
 .container {
-  width: 1400px; /* Adjust the width as needed */
+  width: 1400px; 
   max-width: 100%;
   margin-bottom: 5px;
 }
@@ -58,12 +56,12 @@ body {
 }
 
 #chat-history {
-  padding: 20px; /* Adjust padding to your preference */
+  padding: 20px; 
   overflow-y: auto;
   border-bottom: 1px solid #e2e2e2;
-  height: 600px; /* Adjust based on your preference */
-  font-size: 16px; /* Set font size for chat history */
-  font-family: 'Roboto', sans-serif; /* Modern, clean font */
+  height: 600px; 
+  font-size: 16px; 
+  font-family: 'Roboto', sans-serif; 
   line-height: 1.6;
   color: white;
 }
@@ -74,29 +72,29 @@ body {
   margin-bottom: 16px;
   padding: 10px;
   border-radius: 8px;
-  font-size: large; /* Ensure font size is larger for readability */
-  color: #ffffff; /* Dark text for readability */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-size: large; 
+  color: #ffffff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .message img {
-  width: 40px; /* Adjust size as needed */
-  height: 40px; /* Adjust size as needed */
-  border-radius: 50%; /* Circle shape */
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
   margin-right: 10px;
 }
 
 .message.bot {
-  background-color: #2d2e2ebb; /* Light blue background for bot messages */
-  align-self: flex-start; /* Align to the left */
+  background-color: #2d2e2ebb; 
+  align-self: flex-start; 
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .message.user {
-  background-color: #d1c4e9; /* Light purple background for user messages */
-  align-self: flex-end; /* Align to the right */
-  font-family: 'Courier New', Courier, monospace; /* Different font for user messages */
-  margin-bottom: 50px; /* Larger space below user messages */
+  background-color: #d1c4e9; 
+  align-self: flex-end; 
+  font-family: 'Courier New', Courier, monospace; 
+  margin-bottom: 50px; 
 }
 
 #userdata {
@@ -117,7 +115,6 @@ body {
 }
 
 #send-btn {
-  /* flex: 1 1 auto; */
   margin: 10px;
   padding: 15px;
   text-align: center;
@@ -126,11 +123,8 @@ body {
   background-size: 200% auto;
   color: rgb(44, 44, 44);
   font-weight: bold;
- /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
-  /* box-shadow: 0 0 20px #eee; */
   border-radius: 10px;
   background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
-
 
 }
 
@@ -149,8 +143,6 @@ body {
   background-size: 200% auto;
   color: rgb(44, 44, 44);
   font-weight: bolder;
- /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
-  /* box-shadow: 0 0 20px #eee; */
   border-radius: 10px;
   background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
 }
@@ -164,14 +156,14 @@ body {
     background-color: #141414;
     color: #fff;
     border-radius: 4px;
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    gap: 10px; /* Space between the logo and text */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
     font-size: 16px;
     font-weight: bold;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: none; /* Initially hidden */
+    display: none; 
   }
   
   .hidden {
@@ -183,9 +175,9 @@ body {
   }
   
   #generating-logo {
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Adjust size as needed */
-    border-radius: 50%; /* Circle shape */
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
   
   }
   @media (max-width: 480px) {
