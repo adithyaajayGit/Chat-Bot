@@ -36,7 +36,7 @@ const addMessage = (sender, message) => {
   messageElement.appendChild(textElement);
 
   chatHistory.appendChild(messageElement);
-  chatHistory.scrollTop = chatHistory.scrollHeight;
+  chatHistory.scrollTop = chatHistory.scrollHeight; // Smooth scroll to the bottom
 };
 
 document.getElementById('send-btn').addEventListener('click', async () => {
