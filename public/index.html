@@ -1,34 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chatbot</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="assets/icons8-chatbot-94.png" type="image/png"> 
+  <title>Chat-Wit App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+      margin: 10px 0 20px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-secondary {
+      background-color: #28a745;
+    }
+
+    .btn-secondary:hover {
+      background-color: #1e7e34;
+    }
+  </style>
 </head>
-
 <body>
-  <header class="navbar">
-    <div class="logo">CHATWIT</div>
-    <button id="history-btn">History</button>
-  </header>
-
   <div class="container">
-    <div class="chatbox">
-      <div id="chat-history"></div>
-      <div id="generating-message" class="hidden">
-        <img src="assets/bot.png" alt="Bot Logo" id="generating-logo"> Generating response...
-      </div>
-      <div id="userdata">
-        <input type="text" id="user-input" placeholder="Type a message..." />
-        <button id="send-btn">Send</button>
-      </div>
-    </div>
+    <h1>Welcome to Chat-Wit App</h1>
+    <p>Connect and chat with our smart bot or interact with other users.</p>
+    <button onclick="window.location.href='/login.html'">Login</button>
+    <button class="btn-secondary" onclick="window.location.href='/signup.html'">Sign Up</button>
   </div>
-
-  <script src="script.js"></script>
 </body>
-
 </html>
