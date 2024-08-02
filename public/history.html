@@ -96,38 +96,6 @@ body {
     <div id="chat-history"></div>
     <button onclick="goBack()">Back</button>
   </div>
-  <script>
-    async function loadHistory() {
-      try {
-        const response = await fetch('/history');
-        const messages = await response.json();
-        const chatHistory = document.getElementById('chat-history');
-        
-        messages.forEach(msg => {
-          const messageElement = document.createElement('div');
-          messageElement.className = `message ${msg.sender}`;
-          
-          const logo = document.createElement('img');
-          logo.src = msg.sender === 'user' ? 'assets/user.png' : 'assets/bot.png'; 
-
-          const textElement = document.createElement('span');
-          textElement.innerText = `${msg.message || 'No response'}`; 
-
-          messageElement.appendChild(logo);
-          messageElement.appendChild(textElement);
-
-          chatHistory.appendChild(messageElement);
-        });
-      } catch (error) {
-        console.error('Error loading chat history:', error);
-      }
-    }
-
-    function goBack() {
-      window.location.href = '/';
-    }
-
-    loadHistory();
-  </script>
+  <script src="history.js"></script>
 </body>
 </html>

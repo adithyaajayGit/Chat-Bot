@@ -1,4 +1,3 @@
-const { response } = require("express");
 
 document.addEventListener('DOMContentLoaded', () => {
   // Handle user input and send message
