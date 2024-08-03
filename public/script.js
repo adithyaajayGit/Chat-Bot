@@ -81,60 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Handle user login
-  const loginBtn = document.getElementById('login-btn');
-  if (loginBtn) {
-    loginBtn.addEventListener('click', async () => {
-      const username = document.getElementById('login-username').value;
-      const password = document.getElementById('login-password').value;
-
-      try {
-        const response = await fetch('/api/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ username, password })
-        });
-        const data = await response.json();
-        if (response.ok) {
-          localStorage.setItem('token', data.token);
-          // Redirect to chat or home page
-          window.location.href = '/home.html';
-        } else {
-          alert('Login failed: ' + data.message);
-        }
-      } catch (error) {
-        console.error('Error logging in:', error);
-      }
-    });
-  }
+  
 
   // Handle user signup
-  const signupBtn = document.getElementById('signup-btn');
-  if (signupBtn) {
-    signupBtn.addEventListener('click', async () => {
-      const username = document.getElementById('signup-username').value;
-      const password = document.getElementById('signup-password').value;
-
-      try {
-        const response = await fetch('/api/signup', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ username, password })
-        });
-        if (response.ok) {
-          alert('Signup successful. You can now log in.');
-          // Optionally redirect to login page
-        } else {
-          alert('Signup failed: ' + await response.text());
-        }
-      } catch (error) {
-        console.error('Error signing up:', error);
-      }
-    });
-  }
+ 
 
   const logoutBtn = document.getElementById('logout-btn');
   if (logoutBtn) {
