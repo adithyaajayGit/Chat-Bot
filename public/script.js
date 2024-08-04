@@ -115,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     signupBtn.addEventListener('click', async () => {
       const username = document.getElementById('signup-username').value;
       const password = document.getElementById('signup-password').value;
+      const email = document.getElementById('signup-email').value;
   
       try {
         const response = await fetch('/api/signup', {
@@ -122,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ username, password })
+          body: JSON.stringify({ username, password, email })
         });
         if (response.ok) {
           alert('Signup successful. You can now log in.');

@@ -79,14 +79,14 @@ const authenticateJWT = (req, res, next) => {
 
 // Signup Route
 app.post('/api/signup', async (req, res) => {
-  const { username, password } = req.body;
+  const { username, password, email } = req.body;
 
-  if (!username || !password) {
-    return res.status(400).send('Username and password are required.');
+  if (!username || !password || !email) {
+    return res.status(400).send('All fields are required.');
   }
 
   try {
-    const user = new User({ username, password });
+    const user = new User({ username, password, email });
     await user.save();
     res.status(201).send('User created');
   } catch (error) {
